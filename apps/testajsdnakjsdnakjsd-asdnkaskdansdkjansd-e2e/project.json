@@ -1,0 +1,26 @@
+{
+  "name": "testajsdnakjsdnakjsd-asdnkaskdansdkjansd-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/testajsdnakjsdnakjsd-asdnkaskdansdkjansd-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/testajsdnakjsdnakjsd-asdnkaskdansdkjansd-e2e/cypress.json",
+        "devServerTarget": "testajsdnakjsdnakjsd-asdnkaskdansdkjansd:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "testajsdnakjsdnakjsd-asdnkaskdansdkjansd:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["testajsdnakjsdnakjsd-asdnkaskdansdkjansd"]
+}
